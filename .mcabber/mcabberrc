@@ -1,0 +1,71 @@
+#my settings for mcabber
+set jid = myjid@jabber.ru
+set password = my_secret_password
+set server = jabber.ru
+set ignore_self_presence = 1
+set ssl = 1
+set ssl_ignore_checks = 1
+set nickname = Drone
+set priority = 3
+set priority_away = 0
+set resource = mcabber
+set disable_random_resource = 1
+#event
+set events_command = ~/.mcabber/mcabber-notify.sh
+set event_log_files = 1
+set event_log_dir = ~/.mcabber/event_files
+# History
+# Number of lines to remember for the command line history
+# (default: 0, unlimited).
+set cmdhistory_lines = 250
+set logging = 1
+set load_logs = 1
+set logging_dir = ~/.mcabber/histo/
+set logging_ignore_status = 1
+# You can specify a maximum number of data blocks per buffer (1 block contains
+# about 8kB).  The default is 0 (unlimited).  If set, this value must be > 2.
+set max_history_blocks = 8
+# Status messages
+# The 'message' value will override all others, take care!
+#set message = I'm working on it
+set message_avail     = I'm working on it
+set message_away      = I'm not working on it
+
+# message will be restored when leaving auto-away status.  If this message
+# isn't defined, the status message will stay unchanged.
+set message_autoaway = Auto-away (idle)
+
+# Escape timeout delay (ESCDELAY)
+# The ESCDELAY variable specifies the time, in milliseconds, for which
+# the ncurses interface will await a character sequence.
+# The default is 1000 (1 second).
+# If you want mcabber to react faster after hitting Escape, you can lower
+# this value by setting the ESCDELAY environment variable or setting the
+# 'escdelay' option.
+set escdelay =300 
+# Aliases
+alias me = say /me
+alias online   = status online
+alias away     = status away
+alias dnd      = status dnd
+alias notavail = status notavail
+alias q = say /quit
+
+# Key bindings
+# Ctrl-q (17) bound to /roster unread_next
+bind 17 = roster unread_next
+# Ctrl-x (24) bound to /roster alternate
+bind 24 = roster alternate
+# F5 (269) bound to /roster toggle_offline  (centericq-like, IIRC)
+bind 269 = roster toggle_offline
+# F12 (276) bound to /roster toggle
+bind 276 = roster toggle
+# Ctrl-Up/Ctrl-Down bound to /buffer up/down  (like Ctrl-p/Ctrl-n)
+bind 521 = buffer up
+bind 514 = buffer down
+#Alt-m начать многострочное сообщение
+bind M109 = msay toggle
+# что бы и в русской раскладки работало, т.е. Alt-ь
+bind MU1100 = msay toggle 
+# ну и по Alt-Enter отправляем сообщение (По-умолчанию работает Ctrl-d)
+bind M13 = msay send

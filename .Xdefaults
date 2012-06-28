@@ -1,0 +1,47 @@
+#General
+URxvt.scrollBar:        false
+URxvt.cursorBlink:      true
+URxvt.buffered:         true
+urxvt.transparent: True
+URxvt*shading: 40
+
+#Font
+URxvt.font: xft:terminus:pixelsize=16
+URxvt.boldFont: xft:terminus:bold
+Xft.rgba: none
+
+URxvt.saveLines: 65530
+
+URxvt.underlineURLs:    true
+URxvt.urlLauncher:      firefox
+
+URxvt.jumpScroll: true
+URxvt.skipScroll: true
+
+#Colors
+URxvt.background: #222222
+URxvt.foreground: #ffffff
+
+#black
+URxvt.color8:         rgb:2e/34/36
+#red
+URxvt.color1:         #a42929
+URxvt.color9:         #ef4545
+#green
+URxvt.color2:         rgb:2d/cc/4b
+URxvt.color10:        rgb:58/cf/6e
+#yellow (orange)
+URxvt.color3:         #eab93d
+URxvt.color11:        #ffc123
+#blue
+URxvt.color4:         rgb:00/4d/89
+URxvt.color12:        rgb:61/9f/cf
+#magenta
+URxvt.color5:         rgb:70/6c/9a
+URxvt.color13:        rgb:82/6a/b1
+#cyan
+URxvt.color6:         rgb:2d/96/cc
+URxvt.color14:        rgb:a1/cd/cd
+#white
+URxvt.color7:         rgb:ba/bd/b6
+URxvt.color15:        rgb:ba/bd/b6

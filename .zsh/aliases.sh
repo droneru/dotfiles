@@ -21,4 +21,5 @@ alias q='exit'
 alias 88='ping 8.8.4.4'
 alias 64='ACCEPT_KEYWORDS="~amd64"'
 alias mkc='gvim /etc/make.conf'
+alias ss='cd ~/src/workspaceSpo/spoSystem/'
 

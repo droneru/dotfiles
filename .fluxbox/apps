@@ -1,0 +1,17 @@
+[app] (name=fbrun)
+  [Position]	(CENTER)	{0 0}
+  [Layer]	{2}
+[end]
+[app] (name=Navigator) (class=Firefox) (role=browser)
+  [Deco]	{NONE}
+  [Maximized]	{yes}
+  [Close]	{yes}
+[end]
+[app] (name=gvim) (class=Gvim) (role=vim-2436-2423108615-1354511128)
+  [Deco]	{NONE}
+  [Maximized]	{yes}
+  [Close]	{yes}
+[end]
+[app] (name=Eclipse) (class=Eclipse)
+  [Close]	{yes}
+[end]

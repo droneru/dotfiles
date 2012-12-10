@@ -63,6 +63,12 @@ imap <F6> <Esc>:make<cr>a
 nmap <F6> :make<cr>
 imap <F7> <Esc>:make<Space>clean<cr>a
 nmap <F7> :make<Space>clean<cr>
+nnoremap <A-j> :m+<CR>==
+nnoremap <A-k> :m-2<CR>==
+inoremap <A-j> <Esc>:m+<CR>==gi
+inoremap <A-k> <Esc>:m-2<CR>==gi
+vnoremap <A-j> :m'>+<CR>gv=gv
+vnoremap <A-k> :m-2<CR>gv=gv
 
 " Переключение раскладок и индикация выбранной
 " в данный момент раскладки.

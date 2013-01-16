@@ -1,49 +1,54 @@
-colorscheme desert
-syntax on
-" Подсветка строки, в которой находится в данный момент курсор
-set cursorline
-" Отключаем панель инструментов
-set guioptions-=T
-" Всегда отображать статусную строку для каждого окна
-set laststatus=2
-" установить keymap, чтобы по Ctrl+^ переключался на русский и обратно
-set keymap=russian-jcukenwin 
-" по умолчанию - латинская раскладка
-set iminsert=0
-" по умолчанию - латинская раскладка при поиске
-set imsearch=0
-" игнорировать регистр при поиске
-set ic
-" подсвечивать поиск
-set hls
-" использовать инкрементальный поиск
-set is
-" ширина текста 
-"set textwidth=80
-" минимальная высота окна пусть будет 0 (по умолчанию - 1)
-set winminheight=0
+set nocompatible "обойдёмся без стандартного vi
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+filetype plugin indent on
+
+Bundle 'c9s/bufexplorer'
+Bundle 'scrooloose/nerdtree'
+Bundle 'wincent/Command-T'
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "honza/snipmate-snippets"
+Bundle 'garbas/vim-snipmate'
+
+colorscheme wombat
+syntax on 
+set cursorline " Подсветка строки, в которой находится в данный момент курсор
+set guioptions-=T " Отключаем панель инструментов
+set guioptions-=m " Отключаем меню
+set laststatus=2 " Всегда отображать статусную строку для каждого окна
+set keymap=russian-jcukenwin  " установить keymap, чтобы по Ctrl+^ переключался на русский и обратно
+set iminsert=0 " по умолчанию - латинская раскладка
+set imsearch=0 " по умолчанию - латинская раскладка при поиске
+set ic " игнорировать регистр при поиске
+set hls " подсвечивать поиск
+set is " использовать инкрементальный поиск
+set winminheight=0 " минимальная высота окна пусть будет 0 (по умолчанию - 1)
 " всегда делать активное окно максимального размера
 set noequalalways
 set winheight=9999
-" настраиваю для работы с русскими словами (чтобы w, b, * понимали
-" русские слова)
-set iskeyword=@,48-57,_,192-255
+set iskeyword=@,48-57,_,192-255 " настраиваю для работы с русскими словами (чтобы w, b, * понимали русские слова)
 " задать размер табуляции в четыре пробела
 set ts=4
 set autoindent
-" отображение выполняемой команды
-set showcmd 
-" перенос по словам, а не по буквам
-set linebreak
+set showcmd " отображение выполняемой команды
+set linebreak " перенос по словам, а не по буквам
 set dy=lastline
-" вставлять средней кнопкой мыши
-set mouse=r
-"setlocal spell spelllang=ru_yo,en_us
-"set number  нумерация строк
-set nocompatible      " обойдёмся без стандартного vi
+set mouse=r " вставлять средней кнопкой мыши
 set nobackup
 set noswapfile
 " hotkeys============================
+map <C-n> :NERDTreeToggle<CR>
+
+nmap <F3> <Esc>:BufExplorer<cr>
+vmap <F3> <esc>:BufExplorer<cr>
+imap <F3> <esc>:BufExplorer<cr>
+" следующий буфер
+nmap <C-i> :bn<cr>
+vmap <C-i> <esc>:bn<cr>i
+imap <C-i> <esc>:bn<cr>i
+
 imap <F11> <Esc>:set<Space>nu!<CR>a
 nmap <F11> :set<Space>nu!<CR>
 nmap <F2> :w<cr>

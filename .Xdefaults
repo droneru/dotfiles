@@ -5,6 +5,12 @@ URxvt.buffered:         true
 urxvt.transparent: True
 URxvt*shading: 40
 
+#url
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+URxvt.matcher.rend.0: Uline Bold fg5
+
 #Font
 URxvt.font: xft:terminus:pixelsize=16
 URxvt.boldFont: xft:terminus:bold

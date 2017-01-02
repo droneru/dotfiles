@@ -1,0 +1,16 @@
+# hotkeys ------------------------------------------------
+bind index,pager <up> sidebar-prev
+bind index,pager <down> sidebar-next
+bind index,pager <right> sidebar-open
+bind compose p postpone-message
+bind index p recall-message
+bind index gg first-entry
+bind index G last-entry
+bind pager gg top
+bind pager G bottom
+bind pager J next-line
+bind pager K previous-line
+
+# Sync email
+macro index O "<shell-escape>offlineimap<enter>"           "run offlineimap to sync all mail"
+macro index o "<shell-escape>offlineimap -qf INBOX<enter>" "run offlineimap to sync inbox"

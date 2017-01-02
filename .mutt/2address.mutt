@@ -1,0 +1,9 @@
+# личная/рабочая почта ----------------------------------
+set from = "drone@drone.ru"
+set realname = "Andrey Pavlenko"
+# Status Bar -----------------------------------------
+set status_chars  = " *%A"
+set status_format = "drone@drone.ru: [%f]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
+
+macro index \e1 ":set from=drone@drone.ru\n:set status_format=\"drone@drone.ru: [%f]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───\"\n" "Switch to drone@drone.ru"
+macro index \e2 ":set from=apavlenko@masterdm.ru\n:set status_format=\"apavlenko@masterdm.ru: [%f]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───\"\n" "Switch to work"

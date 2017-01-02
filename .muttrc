@@ -1,0 +1,55 @@
+# Basic Options --------------------------------------
+set wait_key = no        # shut up, mutt
+set mbox_type = Maildir  # mailbox type
+set timeout = 3          # idle time before scanning
+set mail_check = 0       # minimum time between scans
+unset move               # gmail does that
+set delete               # don't ask, just do
+unset confirmappend      # don't ask, just do!
+set quit                 # don't ask, just do!!
+unset mark_old           # read/new is good enough for me
+set beep_new             # bell on new mails
+set pipe_decode          # strip headers and eval mimes when piping
+set thorough_search      # strip headers and eval mimes before searching
+set editor='atom --wait'
+
+# Paths ----------------------------------------------
+set folder           = ~/.mail                    # mailbox location
+set alias_file       = ~/.muttlocal/alias         # where to store aliases
+source ~/.muttlocal/alias
+set header_cache     = ~/.muttlocal/cache/headers # where to store headers
+set message_cachedir = ~/.muttlocal/cache/bodies  # where to store bodies
+set certificate_file = ~/.muttlocal/certificates  # where to store certs
+set mailcap_path     = ~/.mutt/mailcap            # entries for filetypes
+set tmpdir           = ~/.muttlocal/temp          # where to keep temp files
+set signature        = ~/.muttlocal/sig           # my signature file
+set sendmail         = /usr/bin/msmtp
+source ~/.muttlocal/vombatidae.mutt               # Colors
+source ~/.muttlocal/gpg.rc
+source ~/.mutt/2address.mutt
+source ~/.mutt/view.mutt
+source ~/.mutt/hotkeys.mutt
+source ~/.mutt/pgp.mutt
+# address book
+# set query_command="goobook query %s"
+# macro index,pager a "<pipe-message>goobook add<return>" "add sender to google contacts"
+# bind editor <Tab> complete-query
+# Account Settings -----------------------------------
+set spoolfile = "+gmail/INBOX" # Default inbox.
+
+# Mailboxes to show in the sidebar.
+mailboxes +gmail/INBOX \
+          +gmail/sent \
+          +gmail/archive \
+          +gmail/drafts \
+          +gmail/quora \
+          +gmail/md \
+          +gmail/weekend \
+          +gmail/registration \
+          +gmail/brainfuck \
+          +gmail/rtfm \
+
+# Other special folders.
+set mbox      = "+gmail/archive"
+set postponed = "+gmail/drafts"
+set record="+gmail/sent"

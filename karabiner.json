@@ -112,12 +112,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open iTerm",
+                                "description": "Open Messenger",
                                 "from": {
                                     "key_code": "i",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'iTerm.app'" }],
+                                "to": [{ "shell_command": "open -a 'Yandex Messenger.app'" }],
                                 "type": "basic"
                             },
                             {
@@ -182,6 +182,22 @@
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [{ "shell_command": "open -a 'Visual Studio Code.app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_e",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open Zed",
+                                "from": {
+                                    "key_code": "u",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Zed'" }],
                                 "type": "basic"
                             },
                             {

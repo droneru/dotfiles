@@ -39,6 +39,11 @@ config.keys = {
 		mods = "CMD",
 		action = wezterm.action.TogglePaneZoomState,
 	},
+	{
+		key = "Enter",
+		mods = "OPT",
+		action = wezterm.action.DisableDefaultAssignment,
+	},
 }
 
 -- Finally, return the configuration to wezterm:

@@ -323,6 +323,10 @@
                 {
                     "from": { "key_code": "caps_lock" },
                     "to": [{ "apple_vendor_top_case_key_code": "keyboard_fn" }]
+                },
+                {
+                    "from": { "key_code": "right_command" },
+                    "to": [{ "key_code": "f12" }]
                 }
             ],
             "virtual_hid_keyboard": { "keyboard_type_v2": "iso" }

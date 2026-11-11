@@ -43,7 +43,8 @@ config.keys = {
 		key = "Enter",
 		mods = "OPT",
 		action = wezterm.action.DisableDefaultAssignment,
-	},
+    },
+	{ key = 'Enter', mods = 'SHIFT', action = wezterm.action.SendString '\x1b\r' }
 }
 
 -- Finally, return the configuration to wezterm:
